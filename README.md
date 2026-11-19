@@ -19,6 +19,17 @@ panel by dragging and zooming, write a bold outlined title and subtitle, and
 export in 1080×1080, 1080×1350, or 1920×1080. Everything runs in the browser
 with no network requests: no external fonts, scripts, or images.
 
+## How the cover is made
+
+The poster is drawn on a canvas in `app/src/panels.js`: each layout slices the
+canvas into framed panels, each photo is drawn with its own zoom, pan, and
+fit/fill crop, a grade wash (sunset orange-pink, neon magenta-cyan, or noir
+desaturated blue) is painted over the photos, and the title is rendered in
+heavy outlined capitals with a drop shadow over a dark band, an accent rule,
+and the subtitle beneath it. The preview you see is the exact drawing that
+gets exported — the export step just re-renders the same state at the chosen
+pixel size, so there are no surprises between preview and PNG.
+
 ## What is make.fun?
 
 make.fun is a platform where people post **bounties** — small paid tasks with a
@@ -75,6 +86,9 @@ the bounty runs, and winners are paid out from escrow after results are final.
   reason entries fail checks.
 - Submit early if you can — a submitted entry can often be replaced by a newer
   commit before the deadline, but a missed deadline cannot be fixed.
+- Keep your referral code handy: anyone who joins through
+  https://make.fun/r/gya2awcj (code `gya2awcj`) is linked to your account, and
+  referral bounties reward the guides that bring new builders in.
 
 ## Run it
 
